@@ -25,7 +25,7 @@ app.post("/getQA", upload.array("files"), async (req, res) => {
   console.log(dirDocs);
   //   construct embeddings using directory Docs
   console.log("Uploaded files:", files);
-  //   await LangchainUtil.createAndStoreEmbeddings(dirDocs);
+  await LangchainUtil.createAndStoreEmbeddings(dirDocs);
   //construct query string to create query vector
   //   const promptStr = await CommonUtil.constructPromptStr(custObj);
   //Run DB QA chain
