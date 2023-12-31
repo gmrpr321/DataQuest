@@ -49,7 +49,7 @@ clone this repo and perform these steps to set up FrontEnd server
 Change to frontend directory
 
 ```
-cd frontEnd
+cd dataquest
 ```
 
 Install dependencies
