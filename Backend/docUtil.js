@@ -5,7 +5,12 @@ import fs from "fs";
 const DocUtil = (function () {
   const _saveFilesToDir = async (files, dir) => {
     try {
-      //save the files in server directory
+      // Create the directory if it doesn't exist
+      if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir, { recursive: true });
+      }
+
+      // Save the files in the specified directory
       const saveFilesPromises = Promise.all(
         files.map(async (file, index) => {
           const fileName = `file_${index + 1}.pdf`;
@@ -14,12 +19,14 @@ const DocUtil = (function () {
           return fileName;
         })
       );
+
       return saveFilesPromises;
     } catch (error) {
       console.error("Error saving files:", error);
       res.status(500).json({ error: "Internal Server Error" });
     }
   };
+
   const _getDocsFromDir = async (dir) => {
     //get all the files from a directory, returns a list of docs
     const directoryLoader = new DirectoryLoader(dir, {
