@@ -1,0 +1,22 @@
+.wrapper {
+  position: relative;
+  margin-bottom: rem(30px);
+  display: flex;
+  flex-direction: column;
+}
+
+.dropzone {
+  margin: 20px;
+  margin-bottom: 0px;
+}
+
+.icon {
+  color: light-dark(var(--mantine-color-gray-4), var(--mantine-color-dark-3));
+}
+
+.control {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  margin-top: -22px;
+}

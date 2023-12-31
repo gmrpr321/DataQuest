@@ -1,0 +1,14 @@
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+  background-color: rgb(255, 247, 243);
+  width: 100%;
+}
+.textinfo {
+  text-align: center;
+}
+.customize {
+}
