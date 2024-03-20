@@ -12,7 +12,7 @@ const LangchainUtil = (function () {
   const _createAndStoreEmbeddings = async (docs) => {
     const pinecone = new Pinecone({
       environment: "gcp-starter",
-      apiKey: "ab7f33f5-b86d-45c7-9c00-c9996adff017",
+      apiKey: process.env.PINECONE_API_KEY,
     });
 
     const pineconeIndex = pinecone.Index("qadocs");
@@ -37,7 +37,7 @@ const LangchainUtil = (function () {
     });
     const pinecone = new Pinecone({
       environment: "gcp-starter",
-      apiKey: "ab7f33f5-b86d-45c7-9c00-c9996adff017",
+      apiKey: PINECONE_API_KEY,
     });
     const pineconeIndex = pinecone.Index("qadocs");
     const memory = new BufferMemory({
