@@ -41,6 +41,10 @@ Run local server
 ```
 npm run dev
 ```
+## WorkFlow Explanation 
+
+![](https://i.ibb.co/NjF8Dkj/dataq.png)
+
 
 ## Installation - (FrontEnd)
 
